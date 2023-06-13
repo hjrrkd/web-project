@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>TEST</title>
+  <link rel="stylesheet" href="/testpage.css">
+</head>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+</style>
+<nav>
+  <ul class="nav">
+    <li><a href="main.html">Home</a></li>
+    <li><a href="bestseller.html">BestSeller</a></li> 
+    <li><a href="libaray.html">My Library</a></li>
+    <li><a href="mypage.html">My Page</a></li>
+  </ul> 
+</nav>
+<body>
+  <div class="container"> 
+   <div class="status-bar">
+     <div class="status-bar-progress"></div>
+   </div>
+   
+   <div id="question-page-1" class="question-page" style="display: block;">
+     <h1><b>How old are you?</b></h1>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option1')"><img src="image/number-20.png" alt="20s" style="max-width: 100%; max-height: 70%;" > 20s</div>
+       <div class="option-box" onclick="selectOption(this, 'option2')"><img src="image/number-30.png" alt="30s" style="max-width: 100%; max-height: 70%;" > 30s</div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option3')"><img src="image/40.png" alt="40s" style="max-width: 100%; max-height: 70%;" > 40s</div>
+       <div class="option-box" onclick="selectOption(this, 'option4')"><img src="image/50.png" alt="50s" style="max-width: 100%; max-height: 70%;" > 50s </div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option5')"><img src="image/60.png" alt="60s" style="max-width: 100%; max-height: 70%;" > 60s</div>
+       <div class="option-box" onclick="selectOption(this, 'option6')"><img src="image/70.png" alt="70s" style="max-width: 100%; max-height: 70%;" > 70s or older</div>
+     </div>
+     <button onclick="nextQuestion(2)">Next</button>
+   </div>
+ 
+   <div id="question-page-2" class="question-page">
+     <h1><b>Let me know your GENDER!</b></h1>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option1')"><img src="image/male.png" alt="Male" style="max-width: 100%; max-height: 70%;" > Male</div>
+       <div class="option-box" onclick="selectOption(this, 'option2')"><img src="image/femenine.png" alt="Female" style="max-width: 100%; max-height: 70%;" > Female</div>
+     </div>
+     <button onclick="nextQuestion(3)">Next</button>
+   </div>
+ 
+   <div id="question-page-3" class="question-page">
+     <h1><b>What are you most interested in these days?</b></h1>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option1')"><img src="image/science-book.png" alt="Psychology" style="max-width: 100%; max-height: 70%;" > Psychology</div>
+       <div class="option-box" onclick="selectOption(this, 'option2')"><img src="image/analytics.png" alt="Economy" style="max-width: 100%; max-height: 70%;" > Economy</div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option3')"><img src="image/travel-luggage.png" alt="Travel" style="max-width: 100%; max-height: 70%;" > Travel</div>
+       <div class="option-box" onclick="selectOption(this, 'option4')"><img src="image/lifestyle.png" alt="lifestyle" style="max-width: 100%; max-height: 70%;" > lifestyle</div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option5')"><img src="image/languages.png" alt="language" style="max-width: 100%; max-height: 70%;" > language</div>
+       <div class="option-box" onclick="selectOption(this, 'option6')"><img src="image/leadership.png" alt="Leadership" style="max-width: 100%; max-height: 70%;" > Leadership</div>
+     </div>
+     <button onclick="nextQuestion(4)">Next</button>
+   </div>
+ 
+   <div id="question-page-4" class="question-page">
+     <h1><b>Do you have a favorite genre when you read books?</b></h1>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option1')"><img src="image/romance.png" alt="Romance" style="max-width: 100%; max-height: 70%;" > Romance</div>
+       <div class="option-box" onclick="selectOption(this, 'option2')"><img src="image/annonymous.png" alt="Mystery" style="max-width: 100%; max-height: 70%;" > Mystery</div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option3')"><img src="image/wizard.png" alt="Fantasy" style="max-width: 100%; max-height: 70%;" > Fantasy</div>
+       <div class="option-box" onclick="selectOption(this, 'option4')"><img src="image/hourglass.png" alt="History" style="max-width: 100%; max-height: 70%;" > History</div>
+     </div>
+     <button onclick="nextQuestion(5)">Next</button>
+   </div>
+ 
+   <div id="question-page-5" class="question-page">
+     <h1><b>How are you feeling these days?</b></h1>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option1')"><img src="image/laughing.png" alt="Happy" style="max-width: 100%; max-height: 70%;" > Happy</div>
+       <div class="option-box" onclick="selectOption(this, 'option2')"><img src="image/sad.png" alt="Sad" style="max-width: 100%; max-height: 70%;" > Sad</div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option3')"><img src="image/alone.png" alt="Lonely" style="max-width: 100%; max-height: 70%;" > Lonely</div>
+       <div class="option-box" onclick="selectOption(this, 'option4')"><img src="image/overwhelmed.png" alt="Frustrated" style="max-width: 100%; max-height: 70%;" > Frustrated</div>
+     </div>
+     <div class="question-container">
+       <div class="option-box" onclick="selectOption(this, 'option5')"><img src="image/plant.png" alt="healing" style="max-width: 100%; max-height: 70%;" > healing</div>
+       <div class="option-box" onclick="selectOption(this, 'option6')"><img src="image/raise-hand.png" alt="courage" style="max-width: 100%; max-height: 70%;" > courage</div>
+     </div>
+
+     <button onclick="recommendBooks()">Check the result</button>
+   </div>
+ 
+   <div id="book-recommendation" style="display: none;">
+     <h1>These are the books I recommend to you</h1>
+     <div id="book-list"></div>
+   </div>
+  </div>
+
+ 
+   
+   <script>
+     var currentPage = 1;
+     var totalQuestions = 5;
+     var selectedOptions = [];
+     var progressBar = document.querySelector(".status-bar-progress");
+ 
+     function nextQuestion(nextPage) {
+       var currentQuestionPage = document.getElementById("question-page-" + currentPage);
+       currentQuestionPage.style.display = "none";
+       
+       var nextQuestionPage = document.getElementById("question-page-" + nextPage);
+       nextQuestionPage.style.display = "block";
+       
+       currentPage = nextPage;
+ 
+       var progress = (currentPage / totalQuestions) * 100;
+       progressBar.style.width = progress + "%";
+     }
+     
+     function selectOption(optionBox, option) {
+       var questionContainer = optionBox.parentNode;
+       var optionBoxes = questionContainer.getElementsByClassName("option-box");
+       
+       
+       for (var i = 0; i < optionBoxes.length; i++) {
+         optionBoxes[i].classList.remove("selected");
+       }
+       optionBox.classList.add("selected");
+       
+       selectedOptions[currentPage - 1] = option;
+     }
+     
+     function recommendBooks() {
+       
+       var bookRecommendation = document.getElementById("book-recommendation");
+       var bookList = document.getElementById("book-list");
+       var recommendations = [
+        { title: "Book 1", author: "Author 1" },
+        { title: "Book 2", author: "Author 2" },
+        { title: "Book 3", author: "Author 3" }
+         ];
+ 
+       bookList.innerHTML = "";
+       
+       if (!selectedOptions.includes("option1") &&
+      !selectedOptions.includes("option2") &&
+      !selectedOptions.includes("option3") &&
+      !selectedOptions.includes("option4") &&
+      !selectedOptions.includes("option5") &&
+      !selectedOptions.includes("option6")) {
+        alert("Please select an option for each question.");
+          return;
+      }
+
+       if (selectedOptions[0] === "option1") {
+         bookList.innerHTML += "<ul><li>말의 품격 <br>- 조슈아 폴 로만<br><br><img src='image/book10.jpg'></li><li>당신이 좋아지면, 밤이 깊어지면 <br>- 안희연 <br><br><img src='image/book9.jpg'></li><li>이걸 내 마음이라고 하자 <br>- 황인찬 <br><br><img src='image/book11.jpg'></li><br></ul>";
+
+       } else if (selectedOptions[1] === "option2"){
+         bookList.innerHTML += "<ul><li>눈부신 안부 <br>- 백수린<br><br><img src='image/shine.jpg'></li><li>레슨 인 케미스트리 <br>- 보니 가머스<br><br><img src='image/book8.jpg'></li><li>위험한 비너스 <br>- 히가시노 게이고<br><br><img src='image/book12.jpg'></li><br></ul>";
+
+       } else if (selectedOptions[2] === "option3"){
+         bookList.innerHTML += "<ul><li>어디가 제일 좋았어? (564일간 67개국 공감 여행 에세이) <br>- 윤슬기<br><br><img src='image/book7.jpg'></li><li>인생은 소설이다 (기욤 뮈소 장편소설) <br>- 기욤 뮈소<br><br><img src='image/book6.jpg'></li><li>리볼브 <br>- 이종관<br><br><img src='image/book5.jpg'></li><br></ul>";
+
+       } else if (selectedOptions[3] === "option4"){
+         bookList.innerHTML += "<ul><li>유연함의 힘 <br>- 수잔 애쉬포드<br><br><img src='image/power.jpg'></li><li>파친코 (이민진 장편소설) <br>- 이민진<br><br><img src='image/book2.jpg'></li><li>사물 괴담 <br>- J. W. 오커<br><br><img src='image/book1.jpg'></li></ul>";
+
+       } else if(selectedOptions[4] === "option5"){
+         bookList.innerHTML += "<ul><li>'스포트라이트(임주형 산문집)' <br>- 임주형<br><br><img src='image/book3.jpg'></li><br><li>'햇빛은 찬란하고 인생은 귀하니까요' <br>- 장명숙<br><br><img src='image/book16.jpg'></li><br><li>풍덩! <br>- 우지현<br><br><img src='image/book2.jpg'></li><br></ul>";
+       
+        }else if(selectedOptions[5] === "option6"){
+         bookList.innerHTML += "<ul><li>모모 (: Momo(1973)) <br>- 미하엘 엔데<br><br><img src='image/book4.jpg'></li><li>도서 11<br><br><img src='image/book2.jpg'></li><li>나는 나를 응원합니다 <br>- 칭고 <br><br><img src='image/book14.jpg'></li><br></ul>";
+       }
+
+       bookRecommendation.style.display = "block";
+     }
+   </script>
+ </body>
+</html>

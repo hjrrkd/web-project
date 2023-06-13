@@ -1,0 +1,212 @@
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* justify-content: center; */
+  align-items: center;
+  background-size: cover;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .main ul li {
+    margin: 0 80px;
+    display: inline-block;
+    
+  }
+  
+  .main ul li a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 21px;
+    position: relative;
+    padding: 5px 20px;
+  }
+  
+  .main ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background: rgb(216, 192, 216);
+    transition: all .5s ease-out;     /*요소변화 부드럽게 전환*/
+  }
+  
+  .main ul li a:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .main ul li a:hover::after {
+    width: 90%;
+  }
+
+  #nav{
+    margin: 0 auto;
+    width: 90%;
+    height: 60px;
+    background-color: rgba(216, 192, 216, 0.6);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #nav .search-img {
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px 10px 10px;
+  }
+
+  #nav .reset-btn {
+    margin-left: 10px;
+    background-color: transparent;
+  }
+
+  #nav form{
+    width: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+  }
+
+  #nav .btn{
+    float: right;
+    background-color: #d8bfd899;
+  }
+
+.book {
+    border: solid 1px rgba(148, 148, 148, 0.3);
+    width: calc(16.66% - 10px);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+ #addBookForm .form-control{
+    width: 80%;
+  }
+
+  .arrivals{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .arrivals .arrivals_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+  }
+  
+  .arrivals .arrivals_box .arrivals_card{
+    margin: 0 auto;
+    width: 250px;
+    height: 340px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #919191;
+    /* margin: auto 20px; */
+  }
+  
+  .arrivals .arrivals_box .arrivals_card:hover{
+    box-shadow: 0 0 10px rgba(216, 192, 216, 0.6);
+  }
+  
+  .arrivals .arrivals_box .arrivals_card .arrivals_image{
+    width: 150px;
+    height: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  
+  .arrivals .arrivals_box .arrivals_card .arrivals_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+  }
+  
+  .arrivals .arrivals_box .arrivals_card:hover .arrivals_image img{
+    transform: scale(1.1);
+  }
+  
+  .arrivals .arrivals_box .arrivals_card .arrivals_tag p{
+    font-size: 20px;
+    margin: 8px 0;
+  }
+ 
+  
+  .arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_btn{
+    padding: 8px 20px;
+    border: 2px solid rgba(216, 192, 216, 0.6);
+    text-decoration: none;
+    color: #000;
+  }
+
+  #bookDetailsModal, #addBookModal{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  
+#footer {
+    width: 100%;
+    height: 90px; /* 내용물에 따라 알맞는 값 설정 */
+    position: absolute;
+   background-color: rgba(216, 191, 216, 0.6);
+   padding-top: 15px; 
+   color: #808080;
+   font-size: 11px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ #footer a {
+   display: inline-block;
+   color: #808080; font-size: 11px;
+   text-align: center;
+   margin-bottom: 10px;
+   }
+ 
+ #footer a:visited {
+   color: #808080;
+ }
+ 
+ #footer p {
+   margin-top: 0; margin-bottom: 0;   
+   text-align: center;
+ }
+ 
+ #footer p span {
+   display: inline-block;
+   margin-left: 20;
+ }

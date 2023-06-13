@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <link rel="stylesheet" href="intro.css">
+    <script src="jquery-3.4.1.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+    <section class="login-form">
+        <h1 style="font-size: 50px;">WELCOME</h1>
+        <form action="">
+            <div class="int-area">
+                <input type="text" name="id" id="id"
+                autocomplete="off" required>
+                <label for="id">USER NAME</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw"
+                autocomplete="off" required>
+                <label for="pw">PASSWORD</label>
+            </div>
+            <div class="btn-area">
+                <button id="btn" type="submit">LOGIN</button>
+            </div>
+        </form>
+        <div class="caption">
+            <a href="signup.html">Signup</a>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+          let id = $('#id');
+          let pw = $('#pw');
+          let form = $('form');
+        
+          $(form).on('submit', function(event) {
+            event.preventDefault();
+        
+            if ($(id).val() === "heeju" && $(pw).val() === "0918") {
+              $('body').fadeOut(500, function() {
+                window.location.href = 'main.html';
+              });
+            } else {
+              if ($(id).val() === "") {
+                $(id).next('label').addClass('warning');
+              }
+              if ($(pw).val() === "") {
+                $(pw).next('label').addClass('warning');
+              }
+            }
+          });
+        });
+        
+    </script>    
+   
+</body>
+</html>

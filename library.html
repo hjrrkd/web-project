@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-N1NuKtB6kSdQ1m1qyQJlk3hZtYEu7IxG3fQfSpa9bNOD/QVp86CFy2zN6SMfduNS29uFBB+ZOLqXwNMYK0MnLw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  </head>
+<body>
+    <div class="header-fluid">
+        <nav class="main">
+          <ul class="nav">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="bestseller.html">BestSeller</a></li> 
+            <li><a href="library.html">My Library</a></li>
+            <li><a href="mypage.html">My Page</a></li>
+          </ul>
+        </nav>
+      </div> 
+
+      <div id="nav">
+            <div class="col grid">
+              <div class="g-col-6">
+                <form class="d-flex">
+                <img src="image/search.png" alt="option" class="search-img">
+                <input type="search" id="searchInput" name="search" class="form-control" placeholder="Search all books.." autocomplete="off" value="">
+                <button type="button" id="btn_reset" class="btn reset-btn" onclick="resetSearch()">Reset</button>
+                </form>
+                </div>
+                <div class="g-col-6 add">
+                <button type="button" class="btn" data-toggle="modal" data-target="#addBookModal">
+                ADD
+                </button>
+              </div>
+            </div>
+      </div>
+
+      <div id="content">  <!--fake data-->
+        <div class="arrivals">
+            <div class="arrivals_box"  id="bookshelf">
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/736x/de/b5/19/deb519db01a554eb920f5965939548ca.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>No one belong</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/cf/56/a5/cf56a539a1f2c4af085af0571a52b636.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>Spin</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/12/cd/a3/12cda394629e61ceccf33c7edcf80fd0.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>The panguin</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/32/d5/dc/32d5dc962c3901ace4e0a155101fa36b.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>Word by word</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/20/16/e5/2016e5a09e489b2a6b1f7ba68b3dbf91.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>winner</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/77/88/e4/7788e4448049c97dfe04362c28f6a23a.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>Green</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/a9/a0/89/a9a089c15389e3f7f6039b33114d2565.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>Forum</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/e1/a1/18/e1a118be05142576773c24645a05393d.jpg
+                        ">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>Flower</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/0e/50/59/0e505928240bafbc53a55db63515bbb0.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>The emerald light</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/20/c3/3b/20c33b36b158d657c222ca7e2e08214e.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>Abukoo Sudoku</p>
+                        <a href="#" class="arrivals_btn">Details</a>  
+                                        </div>
+                </div>
+    
+            </div>
+    
+        </div>
+
+    </div>
+    <!-- 책추가 모달창 -->
+    <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addBookModalLabel"><b>Add a book</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="addBookForm">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+              </div>
+              <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" name="author" required>
+              </div>
+              <div class="form-group">
+                <label for="publisher">Publisher</label>
+                <input type="text" class="form-control" id="publisher" name="publisher" required>
+              </div>
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" id="date" name="date" required lang="en">
+              </div>
+              <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
+              </div>
+              <div class="form-group">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" class="form-control" id="imageUrl" name="imageUrl" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+            <button type="button" class="btn btn-primary" onclick="addBook()">complete </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 책 세부정보 모달창 -->
+    <div class="modal fade" id="bookDetailsModal" tabindex="-1" role="dialog" aria-labelledby="bookDetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookDetailsModalLabel"><b>Book Details</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="bookDetailsModalBody">
+            <div class="row">
+              <div class="col-4">
+                <img src="" alt="Book Image" style="width: 150px; height: 220px;" class="img-fluid">
+              </div>
+              <div class="col-8">
+                <h2><b>Title</b></h2>
+                <p>Author:</p>
+                <p>Publisher:</p>
+                <p>Date:</p>
+                <p>Rating:</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <script>
+
+        // 전체 책 목록을 보관할 배열
+        function addBook() {
+          // 책 추가 폼에서 입력된 정보 가져오기
+          const title = document.getElementById('title').value;
+          const author = document.getElementById('author').value;
+          const publisher = document.getElementById('publisher').value;
+          const date = document.getElementById('date').value;
+          const rating = document.getElementById('rating').value;
+          const imageUrl = document.getElementById('imageUrl').value;
+    
+          // 책 추가 폼 닫기
+          $('#addBookModal').modal('hide');
+    
+          // 책 추가하기
+          const newArrivals = document.getElementById('newArrivals');
+          const book = document.createElement('div');
+          book.classList.add('arrivals_card');
+          book.innerHTML = `
+          <div class="arrivals_image">
+            <img src="${imageUrl}">
+        </div>
+        <div class="arrivals_tag">
+            <p>${title}<p>
+          <a href="#" class="arrivals_btn" onclick="showBookDetails('${imageUrl}', '${title}', '${author}', '${publisher}', '${date}', '${rating}')">Details</a>
+      </div>
+          `;
+          bookshelf.prepend(book);
+
+          document.getElementById('addBookForm').reset();
+        }
+
+        function showBookDetails(imageUrl, title, author, publisher, date, rating) {
+
+
+         // 책의 평점에 따라 별 아이콘을 생성하는 함수
+function getRatingStars(rating) {
+  const fullStar = '<i class="fas fa-star"></i>';
+  const halfStar = '<i class="fas fa-star-half-alt"></i>';
+  const emptyStar = '<i class="far fa-star"></i>';
+
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= Math.floor(rating)) {
+      stars += fullStar;
+    } else if (i === Math.ceil(rating)) {
+      stars += halfStar;
+    } else {
+      stars += emptyStar;
+    }
+  }
+
+  return stars;
+}
+          
+        
+          // 모달 창에 책의 세부 정보를 표시하기 위한 HTML 생성
+          const modalBody = document.getElementById('bookDetailsModalBody');
+          modalBody.innerHTML = `
+            <div class="book-details">
+              <div class="book-details-image">
+                <img src="${imageUrl}" style="width: 150px; height: 220px;">
+              </div>
+              <div class="book-details-info"><br>
+                <h2><b>${title}</b></h2>
+                <p>Author: ${author}</p>
+                <p>Publisher: ${publisher}</p>
+                <p>Date: ${date}</p>
+                <p>Rating: ${getRatingStars(rating)}</p>
+              </div>
+            </div>
+          `;
+
+          // 모달 창 열기
+          $('#bookDetailsModal').modal('show');
+        }
+
+        // 책 제목 검색 함수
+  function searchBooks() {
+    // 검색어 가져오기
+    var searchValue = document.getElementById("searchInput").value.toLowerCase();
+    
+    // 모든 책 카드 요소 가져오기
+    var cards = document.getElementsByClassName("arrivals_card");
+
+    // 숨겨진 책 카드 요소 초기화
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].style.display = "none";
+    }
+    
+    // 검색어와 일치하는 책 카드 보이기
+    for (var i = 0; i < cards.length; i++) {
+      var title = cards[i].innerText.toLowerCase();
+      
+      if (title.includes(searchValue)) {
+        cards[i].style.display = "block";
+      }
+    }
+  }
+
+  // 검색어 초기화 함수
+  function resetSearch() {
+    document.getElementById("searchInput").value = ""; // 검색어 입력 필드 비우기
+    searchBooks(); // 모든 책 카드 보이기
+  }
+
+  // 검색어 입력 시 책 제목 검색하기
+  document.getElementById("searchInput").addEventListener("input", searchBooks);
+
+  // 엔터 키 입력 시 검색하기
+  document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) { // 13은 엔터 키의 keyCode 값입니다.
+      event.preventDefault(); // 폼 제출 방지
+      searchBooks(); // 책 제목 검색하기
+    }
+  });
+        
+      </script>
+
+      <div id="footer">
+        <p>
+            <a href='https://www.notion.so/Team-Project-e33a805f99214dbfb7109c202574fb87' target='_blank'>Github</a><br>
+            <span>Team : Sketch</span><br/>
+            <span>Copyright © 2023. Sketch. All Rights Reserved</span>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wishlist</title>
+    <link rel="stylesheet" href="/wishlist.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script>
+
+    </script>
+</head>
+<body>
+    
+    <nav class="main">
+        <ul class="nav">
+          <li><a href="main.html">Home</a></li>
+          <li><a href="bestseller.html">BestSeller</a></li> <!--이동할 페이지 수정-->
+          <li><a href="library.html">My Library</a></li>
+          <li><a href="mypage.html">My Page</a></li>
+        </ul>
+    </nav>
+
+        <button type="button" class="btn" data-toggle="modal" data-target="#addBookModal">
+        ADD
+        </button>  
+
+    <div id="content">  <!-- fake data -->
+        <div class="arrivals">
+            <h1>Wishlist</h1>
+             
+            <div class="arrivals_box" id="bookshelf">
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/82/99/0f/82990f77fff2f387f06f4239e830ac72.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>                    
+                      </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/dd/f7/8b/ddf78be975afab82288ae10adae2210a.jpg
+                        ">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/76/66/e8/7666e894d08cb66bb6c68c6ba16789d0.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/b1/9b/06/b19b061137a42766c7be6318f3a25fab.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/16/43/e1/1643e104a6182dbd00d733828ec2971c.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/22/fe/b3/22feb309f0d535fdd23731df4e501f7f.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/60/64/ba/6064ba3ff2640abb14ff8b091699659c.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/84/e0/de/84e0decdaf295cdd9096a29b22453ca4.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/85/2a/b6/852ab6c88aabef2633ad5674ac457b2a.jpg
+                        ">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+                <div class="arrivals_card">
+                    <div class="arrivals_image">
+                        <img src="https://i.pinimg.com/564x/b5/34/52/b53452f5f863c96f1d2e58f20c3fb1a1.jpg">
+                    </div>
+                    <div class="arrivals_tag">
+                        <p>New Arrivals</p>
+                        <a href="#" class="arrivals_btn">Details</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+
+
+  </div>
+  <!-- 책추가 모달창 -->
+  <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addBookModalLabel"><b>Add a book</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="addBookForm">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" class="form-control" id="author" name="author" required>
+            </div>
+            <div class="form-group">
+              <label for="publisher">Publisher</label>
+              <input type="text" class="form-control" id="publisher" name="publisher" required>
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date" name="date" required lang="en">
+            </div>
+            <div class="form-group">
+              <label for="rating">Rating</label>
+              <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+              <label for="imageUrl">Image URL</label>
+              <input type="text" class="form-control" id="imageUrl" name="imageUrl" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+          <button type="button" class="btn btn-primary" onclick="addBook()">complete </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 책 세부정보 모달창 -->
+  <div class="modal fade" id="bookDetailsModal" tabindex="-1" role="dialog" aria-labelledby="bookDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookDetailsModalLabel"><b>Book Details</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="bookDetailsModalBody">
+          <div class="row">
+            <div class="col-4">
+              <img src="" alt="Book Image" style="width: 150px; height: 220px;" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h2><b>Title</b></h2>
+              <p>Author:</p>
+              <p>Publisher:</p>
+              <p>Date:</p>
+              <p>Rating:</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+
+      // 전체 책 목록을 보관할 배열
+      function addBook() {
+        // 책 추가 폼에서 입력된 정보 가져오기
+        const title = document.getElementById('title').value;
+        const author = document.getElementById('author').value;
+        const publisher = document.getElementById('publisher').value;
+        const date = document.getElementById('date').value;
+        const rating = document.getElementById('rating').value;
+        const imageUrl = document.getElementById('imageUrl').value;
+  
+        // 책 추가 폼 닫기
+        $('#addBookModal').modal('hide');
+  
+        // 책 추가하기
+        const newArrivals = document.getElementById('newArrivals');
+        const book = document.createElement('div');
+        book.classList.add('arrivals_card');
+        book.innerHTML = `
+        <div class="arrivals_image">
+          <img src="${imageUrl}">
+      </div>
+      <div class="arrivals_tag">
+          <p>${title}<p>
+        <a href="#" class="arrivals_btn" onclick="showBookDetails('${imageUrl}', '${title}', '${author}', '${publisher}', '${date}', '${rating}')">Details</a>
+    </div>
+        `;
+        bookshelf.prepend(book);
+
+        document.getElementById('addBookForm').reset();
+      }
+
+      function showBookDetails(imageUrl, title, author, publisher, date, rating) {
+
+
+       // 책의 평점에 따라 별 아이콘을 생성하는 함수
+function getRatingStars(rating) {
+const fullStar = '<i class="fas fa-star"></i>';
+const halfStar = '<i class="fas fa-star-half-alt"></i>';
+const emptyStar = '<i class="far fa-star"></i>';
+
+let stars = '';
+for (let i = 1; i <= 5; i++) {
+  if (i <= Math.floor(rating)) {
+    stars += fullStar;
+  } else if (i === Math.ceil(rating)) {
+    stars += halfStar;
+  } else {
+    stars += emptyStar;
+  }
+}
+
+return stars;
+}
+        
+      
+        // 모달 창에 책의 세부 정보를 표시하기 위한 HTML 생성
+        const modalBody = document.getElementById('bookDetailsModalBody');
+        modalBody.innerHTML = `
+          <div class="book-details">
+            <div class="book-details-image">
+              <img src="${imageUrl}" style="width: 150px; height: 220px;">
+            </div>
+            <div class="book-details-info"><br>
+              <h2><b>${title}</b></h2>
+              <p>Author: ${author}</p>
+              <p>Publisher: ${publisher}</p>
+              <p>Date: ${date}</p>
+              <p>Rating: ${getRatingStars(rating)}</p>
+            </div>
+          </div>
+        `;
+
+        // 모달 창 열기
+        $('#bookDetailsModal').modal('show');
+      }
+
+    </script>
+
+    <div id="footer">
+        <p>
+            <a href='https://www.notion.so/Team-Project-e33a805f99214dbfb7109c202574fb87' target='_blank'>Github</a><br>
+            <span>Team : Sketch</span><br/>
+            <span>Copyright © 2023. Sketch. All Rights Reserved</span>
+        </p>
+    </div>
+    
+</body>
+</html>

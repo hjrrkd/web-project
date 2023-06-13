@@ -1,0 +1,140 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("./image/bg2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0,0,0,.1);
+}
+
+.login-form {
+    position: relative;
+    z-index: 2;}
+.login-form h1{
+    font-size: 32px; color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.int-area { 
+    width: 400px;
+    position: relative;
+    margin-top: 20px;
+    height: 40px;
+}
+.int-area:first-child {margin-top: 0;}
+.int-area input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 20px; color:#fff;
+    outline: none;
+}
+
+.int-area select {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: transparent;
+    outline: none;
+    appearance: none;
+    margin-bottom: 10px;
+    
+}
+
+.int-area select:focus + label,
+.int-area select:valid + label,
+.int-area select[data-selected="true"] + label {
+    top: 5px;
+    font-size: 13px;
+    color: thistle;
+    transform: translateY(-30%);
+    transition: all 0.5s ease;
+}
+
+
+.int-area select:focus + label span,
+.int-area select:valid + label span,
+.int-area select[data-selected="true"] + label span {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    transform: translateY(20%);
+    transition: all 0.5s ease;
+}
+
+.int-area select option[value="male"] {
+    color: thistle;
+}
+
+.int-area select option[value="female"] {
+    color: thistle;
+}
+
+
+.int-area label {
+    position: absolute; 
+    left: 10px; top: 18px;
+    font-size: 18px; color: thistle;
+    transition: all .5s ease;
+    transform: translateY(-10%);
+}
+.int-area label.warning {
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+
+@keyframes warning {
+    0% {transform: translateX(-4px);}
+    25% {transform: translateX(4px);}
+    50% {transform: translateX(-4px);}
+    75% {transform: translateX(4px);}
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top:0;
+    font-size: 13px;
+    color: thistle;
+}
+
+.btn-area {margin-top: 30px;}
+.btn-area button {
+    width: 100%; height: 50px;
+    background: thistle; color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.btn-area button a {
+    text-decoration: none;
+    color: inherit;
+}

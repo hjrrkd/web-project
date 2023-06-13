@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', Times, serif !important;
+  font-weight: bold;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 110px;
+}
+
+.carousel-item {
+  height: 930px;
+  transition: opacity 2s ease-in-out;
+}
+
+.caption-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 110px;
+  margin-bottom: 260px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.name {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 190px;
+  font-weight: bold;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  position: relative;
+  text-align: left;
+  left: 10px;
+}
+
+
+/*video*/
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-container img {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+}
+
+
+
+.member-container {
+  display: flex;
+  justify-content: center; /* 가로 정렬을 중앙으로 설정 */
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+
+.member {
+  margin: 50px 100px; /* 상단 여백을 50px로 조정 */
+}
+
+.member img {
+  margin-bottom: 20px; /* 사진 아래 여백을 20px로 조정 */
+}
+
+
+
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px;
+  
+}
+
+nav ul li {
+  margin: 0 80px;
+  display: inline-block;
+  
+}
+
+nav ul li a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 21px;
+  position: relative;
+  padding: 5px 20px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background: thistle;
+  transition: all .5s ease-out;     /*요소변화 부드럽게 전환*/
+}
+
+nav ul li a:hover {
+  color: #333;
+  text-decoration: none;
+  background-color: transparent;
+}
+nav ul li a:hover::after {
+  width: 90%;
+}
+
+.btn-area {margin-top: 30px;}
+
+.btn-area button {
+    width: 400px; height: 70px;
+    background: thistle; 
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 200px;
+    /*text-decoration-line: none;*/
+    text-decoration: none;
+    color: #333;
+}
+.btn-area button:hover {
+  background-color:rgb(176, 215, 240)
+}
+.btn-area a{
+  text-decoration-line: none;
+}
+
+#btn:focus {
+  outline: none;
+}
+
+
+#wrap {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+/*top버튼*/
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 70px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(216, 191, 216,0.6);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 20px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+
+.footer-spacing {
+  height: 70px; 
+}
+
+/*footer design*/
+footer {
+	width: 100%;
+	height: 100px; /* 내용물에 따라 알맞는 값 설정 */
+	bottom: 0px;
+	position: absolute;
+  background-color: thistle;
+  padding-top: 15px; 
+  color: #808080;
+  font-size: 11px;
+}
+
+footer a {
+  display: inline-block;
+  color: #808080; font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer a:visited {
+  color: #808080;
+}
+
+footer p {
+  margin-top: 0; margin-bottom: 0;   
+  text-align: center;
+}
+
+footer p span {
+  display: inline-block;
+  margin-left: 20;
+}
+
+
+/*loading page*/
+#loading-screen {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgb(223, 194, 191);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading {
+  position: absolute; 
+  z-index: 2;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.loading span {
+   display: inline-block; 
+   vertical-align: middle;
+   width: 10px; height: 10px;
+   background: #fff;
+   border-radius: 50%;
+   text-indent: -999px;
+   margin: 0 1px;
+   animation: loading 1s ease infinite;
+}
+
+.loading span:nth-child(2) {animation-delay: .2s;}
+.loading span:nth-child(3) {animation-delay: .4s;}
+.loading span:nth-child(4) {animation-delay: .6s;}
+
+@keyframes loading {
+   0% {transform: translateY(0);}
+   50% {transform: translateY(10px);}
+}
+

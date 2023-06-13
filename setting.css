@@ -1,0 +1,127 @@
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* justify-content: center; */
+  align-items: center;
+  background-size: cover;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url('https://i.pinimg.com/564x/18/cd/b5/18cdb5fa228388e314a074887cc9f423.jpg');
+    background-size:cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+
+.main ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #Fff;
+}
+
+.main ul li {
+  margin: 0 80px;
+  display: inline-block;
+  
+}
+
+.main ul li a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 21px;
+  position: relative;
+  padding: 5px 20px;
+}
+
+.main ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background: rgb(216, 192, 216);
+  transition: all .5s ease-out;     /*요소변화 부드럽게 전환*/
+}
+
+.main ul li a:hover {
+  color: #333;
+  text-decoration: none;
+  background-color: transparent;
+}
+.main ul li a:hover::after {
+  width: 90%;
+}
+
+
+#content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* margin: 0 auto; //무조건 가운데 정렬하는 법 */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    -webkit-text-stroke: 0.1px rgb(216, 192, 216);
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.container h1{
+  font-weight: bolder;
+  font-size: 60px;
+}
+.container h3{
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.col-md-6 p{
+    font-size: 20px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+
+#footer {
+  width: 100%;
+  height: 90px; /* 내용물에 따라 알맞는 값 설정 */
+  position: absolute;
+  bottom: 0px;
+ padding-top: 15px; 
+ color: #808080;
+ font-size: 11px;
+}
+
+#footer a {
+ display: inline-block;
+ color: #808080; font-size: 11px;
+ text-align: center;
+ margin-bottom: 10px;
+}
+
+#footer a:visited {
+ color: #808080;
+}
+
+#footer p {
+ margin-top: 0; margin-bottom: 0;   
+ text-align: center;
+}
+
+#footer p span {
+ display: inline-block;
+ margin-left: 20;
+}

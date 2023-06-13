@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./image/bg2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    backdrop-filter: blur(10px); /* 배경에 블러 효과를 적용합니다. */
+}
+
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+
+.material-symbols-outlined {
+  font-size: 10rem;
+}
+
+.lg-text {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sm-text {
+    font-size: 20px;
+}
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+}
+
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; right: -10px; width: 4px;
+    height: 100%;
+    background-color: white;
+}
+
+#dynamic.active::after {
+    display: none;
+}

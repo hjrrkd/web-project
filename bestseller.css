@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  #header {
+    width: 100%;
+    height: 1500px;
+    background-image: url('image/header.jpg');
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+/* <!-- nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: #fff;
+z-index: 1;
+} --> */
+
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+nav ul li {
+display: inline-block;
+margin: 0 80px;
+}
+
+nav ul li a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 21px;
+    position: relative;
+    padding: 5px 20px;
+  }
+
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background: thistle;
+    transition: all .5s ease-out;     /*요소변화 부드럽게 전환*/
+  }
+
+  nav ul li a:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+nav ul li a:hover::after {
+width: 90%;
+}
+
+nav ul li:hover .sub-navigation {
+display: block;
+}
+
+  .sub-navigation {
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 52px;
+    left: 41%;
+    transform: translateX(-50%);
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    min-width: 400px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.sub-navigation a:hover{
+    color: thistle;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sub-navigation a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 0%;
+    transition: all .5s ease-out;     /*요소변화 부드럽게 전환*/
+  }
+
+
+.sub-menu-item {
+display: block;
+margin-bottom: 5px;
+font-size: 16px;
+font-weight: bold;
+}
+
+  #hometitletext {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 150px;
+    top: 30px;
+  }
+
+  caption {
+    text-align: left;
+    font-weight: bold;
+    background-color: rgba(216, 192, 216, 0.6);
+    padding: 20px 0px 15px 10px;
+  }
+
+  table {
+    margin: 0 auto;
+    padding: 30px;
+    width: 80%;
+    table-layout: fixed; /* 테이블 레이아웃 고정 */
+  }
+  
+  .bookborder:hover {
+    border: 3px solid rgb(216, 192, 216);
+  }
+  tr:nth-child(even) {
+    text-align: center;
+  }
+  td img {
+    width: 250px;
+    height: 300px;
+  }
+
+  td{
+    font-family: 'Gowun Batang', serif;
+  }
+
+  .navigation-bar {
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+  }
+  a {
+    display: inline;
+    font-weight: bold;
+    padding: 30px;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    transform: scale(1.1);
+    color: rgb(150, 84, 150);
+  }
+  a:hover {
+    color: #fff;
+  }
+  #wrap {
+      min-height: calc(100% - 200px);
+      
+    }
+
+    #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        width: 9px; 
+        height: 1px;
+        border-radius: 50%;
+        background-color: rgba(216, 191, 216, 0.6);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        line-height: 10px;
+        font-size: 17px;
+        z-index: 9999;
+        cursor: pointer;
+      }    
+      
+      #back-to-top i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+  

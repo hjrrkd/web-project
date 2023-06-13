@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1>
+            <span class="material-symbols-outlined">auto_stories</span>
+        </h1>
+        <p id="dynamic" class="lg-text"></p>
+        <p class="sm-text">Sketch | Web Project</p>
+    </div>
+    <script>
+        let target = document.querySelector("#dynamic");
+
+        function randomString() {
+            let stringArr = ["A good book, Without hesitation", "BookPalette"];
+            let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
+            let selectStringArr = selectString.split("");
+
+            return selectStringArr;
+        }
+
+        // 타이핑 리셋
+        function resetTyping() {
+            target.textContent = "";
+            dynamic(randomString());
+        }
+
+        // 한 글자씩 텍스트 출력 함수
+        function dynamic(randomArr) {
+            if (randomArr.length > 0) {
+                target.textContent += randomArr.shift();
+                setTimeout(function () {
+                    dynamic(randomArr);
+                }, 80);
+            } else {
+                setTimeout(function () {
+                    target.textContent = "";  // "A good book, Without hesitation" 삭제
+                    let fullText = "BookPalette";
+                    let i = 0;
+                    let typingInterval = setInterval(function () {
+                        target.textContent += fullText[i];
+                        i++;
+                        if (i === fullText.length) {
+                            clearInterval(typingInterval);
+                            setTimeout(function () {
+                                window.location.href = "intro.html"; // 1.5초 후 페이지 이동
+                            }, 1500);
+                        }
+                    }, 80);
+                }, 1500);
+            }
+        }
+
+        dynamic(randomString());
+
+        // 커서 깜빡임 효과
+        function blink() {
+            target.classList.toggle("active");
+        }
+        setInterval(blink, 500);
+
+    </script>
+</body>
+</html>

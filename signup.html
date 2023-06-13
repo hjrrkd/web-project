@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="jquery-3.4.1.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <section class="login-form">
+        <h1 style="font-size: 50px;">SIGN UP</h1>
+        <form action="">
+            <div class="int-area">
+                <input type="text" name="name" id="name" autocomplete="off" required>
+                <label for="name">USER NAME</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="password" id="password" autocomplete="off" required>
+                <label for="password">PASSWORD</label>
+            </div>
+            <div class="int-area">
+                <select name="gender" id="gender" required onchange="updateGenderLabel(this)">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <label id="genderLabel" for="gender">GENDER</label>
+            </div>
+            <div class="int-area">
+                <input type="text" name="age" id="age" autocomplete="off" required>
+                <label for="age">AGE</label>
+            </div>
+            <div class="btn-area">
+                <button id="btn" type="submit"><a href="intro.html">COMPLETE</a></button>
+            </div>
+        </form>
+    </section>
+    <script>
+        let name = $('#name');
+        let password = $('#password');
+        let btn = $('#btn');
+
+        $(btn).on('click', function () {
+            if ($(name).val() == "") {
+                $(name).next('label').addClass('warning');
+                setTimeout(function () {
+                    $('label').removeClass('warning')
+                }, 1500);
+            } else if ($(password).val() == "") {
+                $(password).next('label').addClass('warning');
+            }
+            
+        })
+
+        function updateGenderLabel(select) {
+            let selectedOption = select.options[select.selectedIndex].text;
+            let genderLabel = document.getElementById('genderLabel');
+            let selectedOptionSpan = document.createElement('span');
+            selectedOptionSpan.textContent = selectedOption;
+            genderLabel.innerHTML = ''; // Clear previous content
+            genderLabel.appendChild(document.createTextNode('GENDER'));
+            genderLabel.appendChild(selectedOptionSpan);
+            if (selectedOption !== 'Select Gender') {
+                select.setAttribute('data-selected', 'true');
+            } else {
+                select.removeAttribute('data-selected');
+            }
+        }
+        
+    </script>
+</body>
+</html>

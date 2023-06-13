@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="mypage.css">
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+          <ul class="nav">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="bestseller.html">BestSeller</a></li> 
+            <li><a href="library.html">My Library</a></li>
+            <li><a href="mypage.html">My Page</a></li>
+          </ul>
+        </nav>
+      </div> 
+
+    <div class="back">
+    <div id="content">
+        <div class="profile">
+            <img src="image/cat2.jpg">
+            <p>heeju</p> 
+            <hr>
+            <div class="btn-area">
+                <a href="intro.html" target="_self">
+                    <button id="btn" type="text">logout</button>
+                </a>
+              </div>  
+        </div>
+        
+        <div class="main">
+            <div class="element">
+                <div class="info"> 
+                    <div class="library">
+                        <a href="library.html" target="_self">
+                            <center><img src="image/book.png" alt="book"></center>
+                            library
+                        </a>
+                    </div>
+                    <div class="review">
+                        <a href="review.html" target="_self">
+                            <center><img src="image/star.png" alt="star"></center>
+                            review
+                        </a>
+                    </div>
+                    <div class="setting">
+                        <a href="setting.html" target="_self">
+                            <center><img src="image/setting.png" alt="setting"></center>
+                            setting
+                        </a>
+                    </div>
+                    <div class="wish">
+                        <a href="wishlist.html" target="_self">
+                            <center><img src="image/heart.png" alt="heart"></center>
+                            wish
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="element2">
+            <div class="menu"> 
+                <div class="noti">
+                    <a href="noti.html" target="_self">
+                        <img src="image/noti.png" alt="noti">
+                        Notice
+                        <ul>
+                          <li>Login ID Change Feature Guide</a></li>
+                          <li><a >March 28th web access and usage error notification</a></li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="inquiry">
+                <div class="back33">
+                       <p>You want to change yourself? Find a good book, open its door and enter!<br>
+                         Once you enter it, you will never be the same person when you exit!</p>
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="chart">
+            <!-- 구글 차트 API 로드 -->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                    // 데이터 설정
+                    var data = google.visualization.arrayToDataTable([
+                    ['Month', 'book', 'the average of others'],
+                    ['Jan', 10, 15],
+                    ['Feb', 8, 9],
+                    ['Mar', 2, 8],
+                    ['Apr', 15, 3],
+                    ['May', 1, 5],
+                    ['Jun', 8, 11],
+                    ['Jul', 1, 3],
+                    ['Aug', 9, 6],
+                    ['Sep', 11, 8],
+                    ['Oct', 6, 7],
+                    ['Nov', 9, 8],
+                    ['Dec', 3, 6]
+                    
+                ]);
+
+            // 옵션 설정
+            var options = {
+                title: 'A monthly reading',
+                curveType: 'function', // 꺾은선 그래프 형태
+                legend: { position: 'bottom'},
+                pointsVisible: true,
+                font: 'Georgia, "Times New Roman", Times, serif',
+                colors: ['cornflowerblue', 'rgb(216, 192, 216)']
+                };
+
+            // 차트 생성
+            var chart = new google.visualization.LineChart(document.getElementById('chart'));
+
+            // 차트 그리기
+            chart.draw(data, options);
+            }
+            </script>
+
+            <!-- 차트를 표시할 영역 -->
+            <div id="chart" style="height: 100%;"></div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var imageContainer = document.querySelector(".library");
+        var img = imageContainer.querySelector("img");
+        var hoverImageSrc = "image/book_color.png";
+        var originalImageSrc = img.src;
+    
+        imageContainer.addEventListener("mouseover", function() {
+          img.src = hoverImageSrc;
+        });
+        imageContainer.addEventListener("mouseout", function() {
+          img.src = originalImageSrc;
+        });
+
+        var imageContainer2 = document.querySelector(".review");
+        var img2 = imageContainer2.querySelector("img");
+        var hoverImageSrc2 = "image/star_color.png";
+        var originalImageSrc2 = img2.src;
+    
+        imageContainer2.addEventListener("mouseover", function() {
+          img2.src = hoverImageSrc2;
+        });
+        imageContainer2.addEventListener("mouseout", function() {
+          img2.src = originalImageSrc2;
+        });
+
+        var imageContainer3 = document.querySelector(".wish");
+        var img3 = imageContainer3.querySelector("img");
+        var hoverImageSrc3 = "image/heart_color.png";
+        var originalImageSrc3 = img3.src;
+    
+        imageContainer3.addEventListener("mouseover", function() {
+          img3.src = hoverImageSrc3;
+        });
+        imageContainer3.addEventListener("mouseout", function() {
+          img3.src = originalImageSrc3;
+        });
+
+        var imageContainer4 = document.querySelector(".setting");
+        var img4 = imageContainer4.querySelector("img");
+        var hoverImageSrc4 = "image/setting_color.png";
+        var originalImageSrc4 = img4.src;
+    
+        imageContainer4.addEventListener("mouseover", function() {
+          img4.src = hoverImageSrc4;
+        });
+        imageContainer4.addEventListener("mouseout", function() {
+          img4.src = originalImageSrc4;
+        });
+
+        var imageContainer5 = document.querySelector(".noti");
+        var img5 = imageContainer5.querySelector("img");
+        var hoverImageSrc5 = "image/noti_color.png";
+        var originalImageSrc5 = img5.src;
+    
+        imageContainer5.addEventListener("mouseover", function() {
+          img5.src = hoverImageSrc5;
+        });
+        imageContainer5.addEventListener("mouseout", function() {
+          img5.src = originalImageSrc5;
+        });
+
+      </script>
+    
+
+</body>
+</html>
